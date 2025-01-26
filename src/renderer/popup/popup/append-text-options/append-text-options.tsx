@@ -10,9 +10,9 @@ type AppendTextOptionsProps = {
 
 export function AppendTextOptions(props: AppendTextOptionsProps) {
   const [selectedOption, setSelectedOption] = useState(props.appendTextSelectedOption);
+
   const handleOptionSelectionChange = useCallback<React.ReactEventHandler<HTMLSelectElement>>(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      console.log("AppendTextOptions handleOptionSelectionChange");
       setSelectedOption(e.target.value);
       props.onOptionSelectionChange(e.target.value);
     },
