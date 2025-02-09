@@ -41,11 +41,6 @@ export default (_, env: { mode: "none" | "development" | "production" }) => {
       fallback: {
         crypto: false
       },
-      // alias: {
-      //   "webextension-polyfill-ts": path.resolve(
-      //     path.join(__dirname, "node_modules", "webextension-polyfill-ts")
-      //   )
-      // },
       plugins: [new TsConfigPathsWebpackPlugin()]
     },
     module: {
