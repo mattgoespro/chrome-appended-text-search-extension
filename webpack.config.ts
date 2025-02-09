@@ -67,7 +67,7 @@ export default (_, env: { mode: "none" | "development" | "production" }) => {
               options: {
                 implementation: sass,
                 sassOptions: {
-                  includePaths: [path.resolve(__dirname, "src/webview/styles")]
+                  includePaths: []
                 }
               }
             },
@@ -100,7 +100,6 @@ export default (_, env: { mode: "none" | "development" | "production" }) => {
     },
     plugins: [
       new DefinePlugin({
-        // "process.env.TARGET_BROWSER": JSON.stringify(process.env.TARGET_BROWSER),
         "process.env.EXTENSION_STORAGE_INITIAL_DATA": storageInitialData
       }),
       new ProvidePlugin({
@@ -169,6 +168,6 @@ export default (_, env: { mode: "none" | "development" | "production" }) => {
           })
         : false
     ],
-    externals: ["React"]
+    externals: ["React"] // TODO: is this needed?
   } satisfies Configuration;
 };
