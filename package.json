@@ -11,6 +11,7 @@
   "scripts": {
     "debug": "webpack --config webpack.config.ts --mode development --watch",
     "debug: prod": "webpack --config webpack.config.ts --mode production --watch",
+    "build": "webpack --config webpack.config.ts --mode production",
     "lint": "eslint src"
   },
   "dependencies": {
